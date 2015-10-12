@@ -1,11 +1,6 @@
-this_dir = File.dirname(__FILE__)
-$LOAD_PATH.unshift(File.join(this_dir, '..', 'lib'))
-$LOAD_PATH.unshift(File.join(this_dir, '..', 'app'))
-$LOAD_PATH.unshift(File.join(this_dir, 'support'))
-
-require 'grape'
-require 'json'
-require 'rack/test'
+require "grape"
+require "json"
+require "rack/test"
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
@@ -15,3 +10,4 @@ end
 def app
   described_class
 end
+
